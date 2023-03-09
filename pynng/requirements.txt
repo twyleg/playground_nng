@@ -1,0 +1,3 @@
+pynng
+curio
+opencv-python
