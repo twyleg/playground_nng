@@ -1,3 +1,4 @@
 pynng
 curio
 opencv-python
+pyside6
