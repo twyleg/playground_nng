@@ -21,7 +21,7 @@ address_publisher2 = "ipc:///tmp/publisher2.ipc"
 
 class Gui:
 
-    def __init__(self, sock) -> None: 
+    def __init__(self, sock: pynng.sub0) -> None: 
         self.diff = 0
         self.stopwatch_model = Model(0, 0, 0, 0)
 
