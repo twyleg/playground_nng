@@ -21,7 +21,7 @@ address_publisher2 = "ipc:///tmp/publisher2.ipc"
 
 class Gui:
 
-    def __init__(self) -> None:
+    def __init__(self, sock: pynng.sub0) -> None: 
         self.diff = 0
         self.stopwatch_model = Model(0, 0, 0, 0)
 
@@ -30,6 +30,14 @@ class Gui:
 
         self.engine.rootContext().setContextProperty("stopwatch_model", self.stopwatch_model)
         self.engine.load(os.fspath(Path(__file__).resolve().parent / "../frontend/qml/main.qml"))
+        
+        self.sock = sock
+        self._notifier = QSocketNotifier(self.sock.recv_fd, QSocketNotifier.Read)
+        self._notifier.activated.connect(self.test)
+        
+    def test(self):
+        msg1 = self.sock.recv_msg()
+        print(str(msg1.bytes))
 
     def run(self) -> None:
         if not self.engine.rootObjects():
@@ -54,8 +62,8 @@ if __name__ == "__main__":
             subscriber2.recv_fd: subscriber2
         }
 
-    gui = Gui()
-    gui.run()
+        gui = Gui(subscriber1)
+        gui.run()
 
 
 
