@@ -1,3 +1,6 @@
 [submodule "external/nngpp"]
 	path = external/nngpp
 	url = https://github.com/cwzx/nngpp.git
+[submodule "external/rapidjson"]
+	path = external/rapidjson
+	url = https://github.com/Tencent/rapidjson.git

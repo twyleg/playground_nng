@@ -8,3 +8,4 @@ add_subdirectory(external/nngpp/)
 
 # Examples
 add_subdirectory(pubsub_time/)
+add_subdirectory(reqrep_time/)

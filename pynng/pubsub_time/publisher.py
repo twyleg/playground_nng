@@ -6,7 +6,7 @@ import json
 from datetime import datetime
 
 
-address = "ipc:///tmp/pubsub_time_asyncio.ipc"
+address = "ipc:///tmp/pubsub_time.ipc"
 
 
 def get_json_time_date_string_as_bytes() -> bytes:
@@ -30,7 +30,7 @@ if __name__ == '__main__':
 
             time_date = get_json_time_date_string_as_bytes()
 
-            print(f"{i}: Publishing date and time {time_date}")
+            print(f"{i}: Publishing time_date {time_date}")
             pub.send(time_date)
             i += 1
             time.sleep(1.0)

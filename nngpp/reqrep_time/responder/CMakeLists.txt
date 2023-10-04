@@ -1,12 +1,12 @@
 # Copyright (C) 2023 twyleg
-set(TARGET_NAME pubsub_time_publisher)
+set(TARGET_NAME regrep_time_responder)
 
 
 #
 # add source files to target
 #
 add_executable(${TARGET_NAME}
-        publisher.cc
+        responder.cc
 )
 
 
