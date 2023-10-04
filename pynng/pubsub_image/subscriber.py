@@ -1,8 +1,9 @@
+# Copyright (C) 2023 twyleg
 import pynng
 import cv2
 import numpy as np
 
-address = "ipc:///tmp/pubsub.ipc"
+address = "ipc:///tmp/pubsub_image.ipc"
 
 
 if __name__ == "__main__":

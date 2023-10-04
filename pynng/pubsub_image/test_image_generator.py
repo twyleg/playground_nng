@@ -1,6 +1,4 @@
-""""
-Copyright (C) 2022 twyleg
-"""
+# Copyright (C) 2023 twyleg
 import cv2
 import time
 import numpy as np
@@ -16,8 +14,8 @@ class TestImageGenerator:
         self.x = self.IMAGE_WIDTH // 2
         self.y = self.IMAGE_HEIGHT // 2
 
-        self.plusX = 1
-        self.plusY = 1
+        self.direction_x = 1
+        self.direction_y = 1
 
     def draw_rectangle(self, image, center_x, center_y):
         cv2.rectangle(image, (center_x - 100, center_y - 100), (center_x + 100, center_y + 100), (0, 0, 0), -1)
@@ -37,12 +35,12 @@ class TestImageGenerator:
         self.draw_rectangle(image, self.x, self.y)
         self.draw_time_string(image, self.x - 75, self.y)
 
-        self.x = self.x + self.plusX
+        self.x = self.x + self.direction_x
         if self.x + 100 > self.IMAGE_WIDTH or self.x < 100:
-            self.plusX = -self.plusX
+            self.direction_x = -self.direction_x
 
-        self.y = self.y + self.plusY
+        self.y = self.y + self.direction_y
         if self.y + 100 > self.IMAGE_HEIGHT or self.y < 100:
-            self.plusY = -self.plusY
+            self.direction_y = -self.direction_y
 
         return cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
