@@ -21,7 +21,6 @@ set_target_properties(${TARGET_NAME}
 
 target_include_directories(${TARGET_NAME}
         PUBLIC "${CMAKE_SOURCE_DIR}/external/nngpp/include"
-        PUBLIC "${CMAKE_SOURCE_DIR}/external/rapidjson/include"
 )
 
 #

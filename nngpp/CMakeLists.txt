@@ -6,6 +6,10 @@ project(playground_nngpp)
 # Externals
 add_subdirectory(external/nngpp/)
 
+# Common
+add_subdirectory(utils/)
+
 # Examples
 add_subdirectory(pubsub_time/)
+add_subdirectory(pubsub_multiple_topics/)
 add_subdirectory(reqrep_time/)

@@ -1,5 +1,5 @@
 # Copyright (C) 2023 twyleg
-set(TARGET_NAME pubsub_time_publisher)
+set(TARGET_NAME pubsub_multiple_topics_publisher)
 
 
 #
