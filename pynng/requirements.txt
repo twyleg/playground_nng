@@ -4,3 +4,4 @@ opencv-python
 flask
 asyncio
 aiohttp
+protobuf~=3.20.0

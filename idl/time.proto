@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package playground.nng.time;
+
+message Time {
+    string time = 1;
+}
+
+message Date {
+    string date = 1;
+}
+
+message Request {
+
+    enum RequestType {
+        REQUEST_TYPE_TIME = 0;
+        REQUEST_TYPE_DATE = 1;
+    }
+
+    RequestType request_type = 1;
+}
