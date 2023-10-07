@@ -7,13 +7,14 @@ project(playground_nngpp)
 add_subdirectory(external/nngpp/)
 
 # IDL
-add_subdirectory(idl/)
+add_subdirectory(resources/idl/)
 
 # Common
 add_subdirectory(utils/)
 
 # Examples
 add_subdirectory(pubsub_time/)
+add_subdirectory(pubsub_time_tls/)
 add_subdirectory(pubsub_multiple_topics/)
 add_subdirectory(reqrep_time/)
 add_subdirectory(reqrep_time_protobuf/)

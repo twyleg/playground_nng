@@ -12,7 +12,7 @@ The plyground is based on the following components:
 * git
 * protobuf
 
-See [scripts/](https://github.com/twyleg/playground_nng/tree/master/scripts) for dependency install scripts for multiple distributions.
+See [scripts/](https://github.com/twyleg/playground_nng/tree/master/resources/scripts) for dependency install scripts for multiple distributions.
 
 ## Usage
 
